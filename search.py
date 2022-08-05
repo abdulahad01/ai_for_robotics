@@ -35,15 +35,15 @@ delta = [[-1, 0], # go up
 
 delta_name = ['^', '<', 'v', '>']
 
-def get_neighbors(cell):
-    ls =[]
-    for i in range(len(delta)):
-        x = cell[0]+delta[i][0]
-        y = cell[1]+delta[i][1]
-        if (x >=0 and x < len(grid)) and (y >=0 and y < len(grid[0])):
-            ls.append([x,y])
-#     print(ls)
-    return ls
+# def get_neighbors(cell):
+#     ls =[]
+#     for i in range(len(delta)):
+#         x = cell[0]+delta[i][0]
+#         y = cell[1]+delta[i][1]
+#         if (x >=0 and x < len(grid)) and (y >=0 and y < len(grid[0])):
+#             ls.append([x,y])
+# #     print(ls)
+#     return ls
     
 
 def search(grid,init,goal,cost):
@@ -58,7 +58,7 @@ def search(grid,init,goal,cost):
                 return [open[tuple(current_node)],current_node[0],current_node[1]]
                 break
             else:
-                neighbors = get_neighbors(current_node)
+                # neighbors = get_neighbors(current_node)
                 closed.append(tuple(current_node))
     #             print(open)
     #             print(current_node)
